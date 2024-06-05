@@ -1,0 +1,74 @@
+﻿@model NhmLesson06CF.Models.NhmBook
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NhmBook</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NhmBookId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhmBookId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhmTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhmTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhmAuthor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhmAuthor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhmYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhmYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhmPulisher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhmPulisher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhmPicture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhmPicture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhmCategoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhmCategoryId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NhmID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

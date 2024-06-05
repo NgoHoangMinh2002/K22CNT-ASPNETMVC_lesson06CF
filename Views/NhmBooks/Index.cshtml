@@ -1,0 +1,69 @@
+﻿@model IEnumerable<NhmLesson06CF.Models.NhmBook>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NhmBookId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhmTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhmAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhmYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhmPulisher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhmPicture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhmCategoryId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhmBookId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhmTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhmAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhmYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhmPulisher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhmPicture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhmCategoryId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NhmID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NhmID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NhmID })
+        </td>
+    </tr>
+}
+
+</table>

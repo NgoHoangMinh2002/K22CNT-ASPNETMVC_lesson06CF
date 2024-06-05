@@ -1,0 +1,33 @@
+﻿@model IEnumerable<NhmLesson06CF.Models.NhmCategory>
+
+@{
+    ViewBag.Title = "NhmIndex";
+}
+
+<h2>NhmIndex</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NhmCategoryName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhmCategoryName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NhmId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NhmId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NhmId })
+        </td>
+    </tr>
+}
+
+</table>
